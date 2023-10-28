@@ -5,7 +5,7 @@
  Updated: Mon Oct 23 12:53:47 PM IST 2023
  */
 
-const selectionOptions = ["ROCK", "PAPER", "SCISSOR"]
+const selectionOptions = ["ROCK", "PAPER", "SCISSORS"]
 
 function handleButtonClick(input) {
   let randomComputerSelection = Math.floor(Math.random() * selectionOptions.length);
