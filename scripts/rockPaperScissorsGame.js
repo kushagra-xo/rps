@@ -13,10 +13,10 @@ function handleButtonClick(input) {
   let computerLoseIndex = (playerSelectionLocal - 1 + selectionOptions.length) % selectionOptions.length;
 
   if (playerSelectionLocal == randomComputerSelection) {
-    alert("tie");
+    alert(`RESULT: TIE\nCOMPUTER CHOSE: ${selectionOptions[randomComputerSelection]}`);
   } else if (randomComputerSelection == computerLoseIndex) {
-    alert("win"); 
+    alert(`RESULT: WIN\nCOMPUTER CHOSE: ${selectionOptions[randomComputerSelection]}`);
   } else {
-    alert("lose");
+    alert(`RESULT: LOSE\nCOMPUTER CHOSE: ${selectionOptions[randomComputerSelection]}`);
   }
 }
