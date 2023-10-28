@@ -7,10 +7,18 @@
 		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
 	</head>
 	<body>
+		<header>
+			<h1>ROCK PAPER SCISSORS</h1>
+			<div class="info">
+				<div id="score"></div>
+				<div id="result"></div>
+				<div id="computerChoice"></div>
+			</div>
+		</header>
 		<div class="gameOptions">
-			<div class="rock"><button id="rock" onclick="handleButtonClick('rock')">Rock</button></div>
-			<div class="paper"><button id="paper" onclick="handleButtonClick('paper')">Paper</button></div>
-			<div class="scissors"><button id="scissors" onclick="handleButtonClick('scissors')">Scissors</button></div>
+			<div class="rock"><button id="rock">Rock</button></div>
+			<div class="paper"><button id="paper">Paper</button></div>
+			<div class="scissors"><button id="scissors">Scissors</button></div>
 		</div>
 		<script src="scripts/rockPaperScissorsGame.js"></script>
 	</body>

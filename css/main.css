@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
+
+body{
+	display: flex;
+	flex-flow: column;
+	background: #14110F;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: comfortaa;
+	color: #F3F3F4; 
+	background: #34312D;
+	border-radius: 20px;
+	padding: 5% 2%;
+	margin: 4%;
+}
+
+.info{
+	display: flex;
+	flex-flow: column;
+	gap: 10px;
+	padding: 2%;
+}
+
 .gameOptions{
 	display: flex;
 	justify-content: space-around;
