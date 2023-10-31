@@ -1,36 +1,32 @@
-/*
- Title: Rock Paper Scissors 
- Description: A simple rock paper scissors game implemented in js
- Author: kushagra-xo
- Updated: Mon Oct 23 12:53:47 PM IST 2023
- */
-
 const selectionOptions = ["ROCK", "PAPER", "SCISSORS"]
 
 const rock = document.getElementById('rock')
 const paper = document.getElementById('paper')
 const scissors = document.getElementById('scissors')
 
-rock.addEventListener('click', () => handleButtonClick('ROCK'))
-paper.addEventListener('click', () => handleButtonClick('PAPER'))
-scissors.addEventListener('click', () => handleButtonClick('SCISSORS'))
+let options = document.querySelector('.gameOptions');
+options.addEventListener('click', (event) => {
+  if (event.target.tagName == 'options') {
+    handleButtonClick(event.target.id.toUpperCase());
+  }
+});
+
+rock.addEventListener('click', () => handleButtonClick(selectionOptions[0]))
+paper.addEventListener('click', () => handleButtonClick(selectionOptions[1]))
+scissors.addEventListener('click', () => handleButtonClick(selectionOptions[2]))
+
+let scoreElement = document.getElementById('score')
+let resultElement = document.getElementById('result')
+let computerChoiceElement = document.getElementById('computerChoice')
 
 let score = 0;
-document.getElementById('score').textContent = "Score: " + score;
-
 let result = null;
-document.getElementById('result').textContent = "Result: " + result;
-
 let randomComputerSelection = null;
-document.getElementById('computerChoice').textContent = "Computer: " + selectionOptions[randomComputerSelection];
 
-function updateScore()
-{
-  document.getElementById('score').textContent = "Score: " + score;
-}
-function updateResult()
-{
-  document.getElementById('result').textContent = "Result: " + result;
+function updateInfo() {
+  scoreElement.textContent = `Score: ${score}`;
+  resultElement.textContent = `Result: ${result}`;
+  computerChoiceElement.textContent = `Computer: ${selectionOptions[randomComputerSelection]}`;
 }
 
 function handleButtonClick(input) {
@@ -47,8 +43,9 @@ function handleButtonClick(input) {
     result = `LOSE`
     score--;
   }
-
-  updateScore();
-  updateResult();
-  document.getElementById('computerChoice').textContent = "Computer: " + selectionOptions[randomComputerSelection];
+  updateInfo();
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+  updateInfo();
+});
