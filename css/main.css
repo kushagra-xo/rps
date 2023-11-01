@@ -4,25 +4,32 @@ body{
 	display: flex;
 	flex-flow: column;
 	background: #14110F;
+	font-family: sans;
 }
 
 header{
 	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
 	justify-content: space-around;
 	align-items: center;
-	font-family: comfortaa;
+	font-family: comfortaa,sans;
 	color: #F3F3F4; 
 	background: #4d4d4d;
 	border-radius: 20px;
 	padding: 5% 2%;
 	margin: 4%;
+	margin-bottom: 8%;
+	text-align: center;
 }
 
 .info{
 	display: flex;
 	flex-flow: column;
 	gap: 10px;
-	padding: 2%;
+	padding: 3%;
+	border: solid white;
+	border-radius: 10px;
 }
 
 .gameOptions{
