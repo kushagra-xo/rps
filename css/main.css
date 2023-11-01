@@ -10,7 +10,7 @@ body{
 header{
 	display: flex;
 	flex-flow: row wrap;
-	gap: 20px;
+	gap: 40px;
 	justify-content: space-around;
 	align-items: center;
 	font-family: comfortaa,sans;
