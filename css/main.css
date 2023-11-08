@@ -10,14 +10,14 @@ body{
 header{
 	display: flex;
 	flex-flow: row wrap;
-	gap: 40px;
 	justify-content: space-around;
 	align-items: center;
 	font-family: comfortaa,sans;
 	color: #F3F3F4; 
 	background: #4d4d4d;
 	border-radius: 20px;
-	padding: 5% 2%;
+	padding: 4vmin;
+	gap: 4vmin;
 	margin: 4%;
 	margin-bottom: 8%;
 	text-align: center;
@@ -27,12 +27,22 @@ header{
 	display: flex;
 	flex-flow: column;
 	gap: 10px;
-	padding: 3%;
-	border: solid white;
-	border-radius: 10px;
 }
 
 .gameOptions{
 	display: flex;
 	justify-content: space-around;
+}
+
+.option{
+	font-size: large;
+	padding: 2vmin;
+	border-radius: 10px;
+	background: #4d4d4d;
+	color: #F3F3F4;
+  transition: background 0.5s ease;
+}
+
+.option:hover{
+	background: #737373;
 }
